@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Environmental Monitoring Web GIS - Kashmir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.2.4/ol.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <header class="glass" id="header">
+    <div class="title-box">
+      <h1>Environmental <span class="accent">Monitoring</span> Web GIS</h1>
+      <p>Live weather of Muzaffarabad, Poonch and Mirpur (Azad Kashmir)</p>
+    </div>
+    <div class="actions">
+      <button id="refreshBtn" class="pill">Refresh Data</button>
+      <button id="resetBtn" class="pill ghost">Reset View</button>
+      <div id="status">Loading...</div>
+    </div>
+  </header>
+
+  <div class="glass" id="basemap">
+    <button data-map="street" class="active">Map</button>
+    <button data-map="satellite">Satellite</button>
+  </div>
+
+  <div id="cards"></div>
+
+  <div class="glass" id="legend">
+    <b>Temperature (&deg;C)</b>
+    <div><span class="dot" style="background:#60a5fa"></span>Below 15</div>
+    <div><span class="dot" style="background:#4ade80"></span>15 &ndash; 25</div>
+    <div><span class="dot" style="background:#fbbf24"></span>25 &ndash; 35</div>
+    <div><span class="dot" style="background:#f87171"></span>Above 35</div>
+  </div>
+
+  <div class="glass" id="popup"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ol@v9.2.4/dist/ol.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
